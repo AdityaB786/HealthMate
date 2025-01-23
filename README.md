@@ -36,7 +36,7 @@ This application is built using the MERN stack (MongoDB, Express.js, React.js, N
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
 - **AI Integration**: OpenAI API (ChatGPT)
-- **Deployment**: Heroku for backend, Netlify for frontend
+- **Deployment**: onrender
 
 ---
 
