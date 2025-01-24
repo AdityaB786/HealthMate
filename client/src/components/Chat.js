@@ -13,21 +13,18 @@ const Chat = () => {
   };
 
   const beautifyResponse = (responseText) => {
-    // Beautifying the response by adding bullet points and formatting
     const points = responseText
-      .split("\n\n") // Split response into paragraphs
+      .split("\n\n") 
       .map((paragraph) => {
-        // Add some basic formatting (bold and italics) within the text
         const parts = paragraph.split(":");
         if (parts.length === 2) {
-          // Bold for title and italicize the content after ":"
           return `<li><strong>${parts[0]}</strong>: <em>${parts[1]}</em></li>`;
         }
-        return `<li>${paragraph}</li>`; // If no colon, just treat as a normal paragraph
+        return `<li>${paragraph}</li>`; 
       })
       .join("");
 
-    return `<ul>${points}</ul>`; // Create a bullet list
+    return `<ul>${points}</ul>`; 
   };
 
   const handleSubmit = async (e) => {
