@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-import '../styles/chat.css';
+import "../styles/chat.css";
 
 const Chat = () => {
   const [prompt, setPrompt] = useState("");
@@ -14,17 +14,17 @@ const Chat = () => {
 
   const beautifyResponse = (responseText) => {
     const points = responseText
-      .split("\n\n") 
+      .split("\n\n")
       .map((paragraph) => {
         const parts = paragraph.split(":");
         if (parts.length === 2) {
           return `<li><strong>${parts[0]}</strong>: <em>${parts[1]}</em></li>`;
         }
-        return `<li>${paragraph}</li>`; 
+        return `<li>${paragraph}</li>`;
       })
       .join("");
 
-    return `<ul>${points}</ul>`; 
+    return `<ul>${points}</ul>`;
   };
 
   const handleSubmit = async (e) => {
@@ -74,7 +74,10 @@ const Chat = () => {
       </form>
 
       {response && (
-        <div className="response" dangerouslySetInnerHTML={{ __html: response }} />
+        <div
+          className="response"
+          dangerouslySetInnerHTML={{ __html: response }}
+        />
       )}
     </div>
   );
