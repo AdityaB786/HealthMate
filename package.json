@@ -4,14 +4,14 @@
   "description": "**HealthMate** is a web application designed to assist users with managing their health. It allows users to view available doctors, schedule appointments, manage notifications, and interact with a chatbot powered by OpenAI's GPT-3 to answer health-related questions.",
   "main": "server.js",
   "scripts": {
-    "dev":"nodemon server/server.js",
-    "start":"node server/server.js",
-    "build":"npm install && npm install --prefix client && npm run build --prefix client"
+    "dev": "nodemon server/server.js",
+    "start": "node server/server.js",
+    "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
