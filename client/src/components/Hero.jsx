@@ -7,8 +7,8 @@ const Hero = () => {
     <section className="hero">
       <div className="hero-content">
         <h1>
-          Your Health, <br />
-          Our Responsibility
+        Your Wellness  <br />
+        Our Commitment
         </h1>
         <p>
           HealthMate is a comprehensive healthcare platform that connects
