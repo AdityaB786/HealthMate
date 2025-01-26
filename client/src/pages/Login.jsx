@@ -37,7 +37,7 @@ function Login() {
       }
 
       const { data } = await toast.promise(
-        axios.post("/user/login", {
+        axios.post("api/user/login", {
           email,
           password,
         }),

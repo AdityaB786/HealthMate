@@ -68,7 +68,7 @@ function Register() {
       }
 
       await toast.promise(
-        axios.post("/user/register", {
+        axios.post("api/user/register", {
           firstname,
           lastname,
           email,

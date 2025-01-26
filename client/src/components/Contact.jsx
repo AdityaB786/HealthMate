@@ -18,8 +18,8 @@ const Contact = () => {
   };
 
   const formSubmit = async (e) => {
-    e.preventDefault(); // Prevent page reload
-    const url = "https://formspree.io/f/mwkwpzvl"; // Replace with your Formspree endpoint
+    e.preventDefault(); 
+    const url = "https://formspree.io/f/mwkwpzvl"; 
 
     try {
       const response = await fetch(url, {

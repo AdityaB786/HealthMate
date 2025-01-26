@@ -38,7 +38,7 @@ const Chat = () => {
     setLoading(true);
 
     try {
-      const { data } = await axios.post("/chat/get-response", { prompt });
+      const { data } = await axios.post("api/chat/get-response", { prompt });
 
       if (data && data.answer) {
         const generatedText = data.answer || "No response generated.";

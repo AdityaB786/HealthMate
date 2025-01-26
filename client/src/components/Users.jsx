@@ -17,7 +17,7 @@ const Users = () => {
   const getAllUsers = async (e) => {
     try {
       dispatch(setLoading(true));
-      const temp = await fetchData(`/user/getallusers`);
+      const temp = await fetchData(`api/user/getallusers`);
       setUsers(temp);
       dispatch(setLoading(false));
     } catch (error) {}
