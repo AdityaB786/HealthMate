@@ -1,5 +1,7 @@
 # HealthMate - MERN Stack Project
 
+https://aarogyamitra.onrender.com
+
 **HealthMate** is a web application designed to assist users with managing their health. It allows users to view available doctors, schedule appointments, manage notifications, and interact with a chatbot powered by OpenAI's GPT-3 to answer health-related questions. 
 
 This application is built using the MERN stack (MongoDB, Express.js, React.js, Node.js) and integrates with OpenAI's API to provide real-time assistance to users.
@@ -88,7 +90,7 @@ GEMINI_API_KEY=your_openai_api_key
 
 **Frontend:**
 ```env
-REACT_APP_API_URL=http://localhost:8000
+REACT_APP_API_URL=http://aarogyamitra.onrender.com
 ```
 
 5. **Run the project locally**:
