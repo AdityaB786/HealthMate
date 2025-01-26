@@ -25,7 +25,7 @@ This application is built using the MERN stack (MongoDB, Express.js, React.js, N
 - **Apply for Doctor**: Allows medical professionals to apply to join the platform and offer consultations.
 - **Contact Us**: A form where users can reach out for support or inquiries.
 - **Profile Management**: Users can update their personal information, view health records, and manage account settings.
-- **ChatGPT Integration**: A chatbot powered by OpenAI's GPT-3 that answers user queries related to health, fitness, and general wellness.
+- **Gemini Integration**: A chatbot powered by GEMINI that answers user queries related to health, fitness, and general wellness.
 
 ---
 
@@ -35,7 +35,7 @@ This application is built using the MERN stack (MongoDB, Express.js, React.js, N
 - **Backend**: Node.js, Express.js
 - **Database**: MongoDB
 - **Authentication**: JWT (JSON Web Tokens)
-- **AI Integration**: OpenAI API (ChatGPT)
+- **AI Integration**: OpenAI API (GEMINI)
 - **Deployment**: onrender
 
 ---
@@ -49,7 +49,7 @@ Make sure you have the following installed:
 - **Node.js** (LTS version)
 - **MongoDB** (locally or use MongoDB Atlas for cloud-based database)
 - **Git** (for version control)
-- **OpenAI API key** for ChatGPT functionality
+- **OpenAI API key** for GEMINI functionality
 
 ### Installation Steps
 
@@ -83,7 +83,7 @@ Create a `.env` file in both the **backend** and **frontend** folders and add th
 PORT=8000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
-OPENAI_API_KEY=your_openai_api_key
+GEMINI_API_KEY=your_openai_api_key
 ```
 
 **Frontend:**
@@ -163,7 +163,7 @@ The app should now be running on `http://localhost:3000` (frontend) and `http://
 
 ### ChatGPT Integration
 
-- **POST /api/chatgpt/query**: Send a health-related query to the ChatGPT API and receive a response.
+- **POST /api/gemini/query**: Send a health-related query to the Gemini API and receive a response.
     - **Body**:
     ```json
     {
