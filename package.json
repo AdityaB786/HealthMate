@@ -1,12 +1,12 @@
 {
   "name": "getfit",
   "version": "1.0.0",
-  "description": "**HealthMate** is a web application designed to assist users with managing their health.",
-  "main": "index.js",
+  "description": "**HealthMate** is a web application designed to assist users with managing their health. It allows users to view available doctors, schedule appointments, manage notifications, and interact with a chatbot powered by OpenAI's GPT-3 to answer health-related questions.",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon server/server.js",
-    "start": "node server/server.js",
-    "build": "npm install && npm install --prefix client && npm run build --prefix client"
+    "dev":"nodemon server/server.js",
+    "start":"node server/server.js",
+    "build":"npm install && npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
