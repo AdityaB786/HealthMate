@@ -12,12 +12,12 @@ const AboutUs = () => {
           </div>
           <div className="hero-content">
             <p>
-              HealthMate is your ultimate companion for managing and enhancing
+              AarogyaMitra is your ultimate companion for managing and enhancing
               your health journey. Designed with a user-centric approach,
-              HealthMate combines cutting-edge technology with intuitive
+              AarogyaMitra combines cutting-edge technology with intuitive
               features to empower individuals to take control of their
               well-being. Whether you're scheduling appointments, tracking your
-              health goals, or staying updated with notifications, HealthMate
+              health goals, or staying updated with notifications, AarogyaMitra
               ensures a seamless and efficient experience.
             </p>
           </div>

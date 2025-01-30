@@ -58,7 +58,7 @@ const Chat = () => {
 
   return (
     <div className="chat-container">
-      <h2>Chat with Gemini</h2>
+      <h2>Chat with Us</h2>
 
       <form onSubmit={handleSubmit}>
         <textarea

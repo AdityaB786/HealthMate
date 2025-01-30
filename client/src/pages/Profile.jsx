@@ -6,12 +6,12 @@ import { setLoading } from "../redux/reducers/rootSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Loading from "../components/Loading";
 import fetchData from "../helper/apiCall";
-import { jwtDecode } from "jwt-decode"; // Correct
+import { jwtDecode } from "jwt-decode"; 
 
 axios.defaults.baseURL = process.env.REACT_APP_SERVER_DOMAIN;
 
 function Profile() {
-  const { userId } = jwtDecode(localStorage.getItem("token")); // Corrected usage of jwtDecode
+  const { userId } = jwtDecode(localStorage.getItem("token")); 
   const dispatch = useDispatch();
   const { loading } = useSelector((state) => state.root);
   const [file, setFile] = useState("");
@@ -86,7 +86,7 @@ function Profile() {
     try {
       await toast.promise(
         axios.put(
-          "/user/updateprofile",
+          "api/user/updateprofile",
           {
             firstname,
             lastname,
