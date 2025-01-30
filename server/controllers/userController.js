@@ -51,7 +51,7 @@ const login = async (req, res) => {
 };
 
 const register = async (req, res) => {
-  console.log(req.body); // Log the request body to check if password is present
+  console.log(req.body); 
 
   try {
     const emailPresent = await User.findOne({ email: req.body.email });
@@ -64,7 +64,7 @@ const register = async (req, res) => {
       return res.status(400).send("Password is required");
     }
 
-    const hashedPass = await bcrypt.hash(req.body.password, 10); // Make sure password is valid
+    const hashedPass = await bcrypt.hash(req.body.password, 10); 
     const user = new User({ ...req.body, password: hashedPass });
 
     const result = await user.save(); // Save the new user

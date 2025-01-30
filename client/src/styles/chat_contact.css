@@ -1,0 +1,154 @@
+@import url(app.css);
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 40%;
+  margin: 0 auto; /* Center the container */
+}
+
+.apply-doctor {
+  height: 90vh;
+}
+
+.chat-container {
+  max-width: 600px;
+  margin: 5rem auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  gap: 1rem;
+}
+
+textarea {
+  resize: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  outline: none;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px;
+  background-color: #da6309;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:disabled {
+  background-color: #ccc;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.response {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.response ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.response li {
+  margin-bottom: 10px;
+}
+
+.response strong {
+  font-weight: bold;
+}
+
+.response em {
+  font-style: italic;
+}
+
+/* Mobile-responsive styles */
+@media (max-width: 768px) {
+  .contact-container {
+    width: 70%;  /* Ensure the container fits well on smaller screens */
+    margin: 1rem auto; /* Adjust margin for smaller screens */
+  }
+
+  .chat-container {
+    width: 90%;  /* Ensure the container takes up most of the screen */
+    margin: 3rem auto;  /* Reduce margin for mobile */
+    padding: 15px;  /* Adjust padding for smaller screens */
+  }
+
+  h2 {
+    font-size: 1.5rem;  /* Adjust title size for better mobile readability */
+  }
+
+  textarea {
+    font-size: 14px;  /* Slightly smaller text area font for better fit */
+  }
+
+  button {
+    font-size: 14px;  /* Smaller button text for mobile */
+    padding: 8px;  /* Reduce button padding for better fit */
+  }
+
+  .response {
+    padding: 10px;  /* Reduce padding inside response box */
+    font-size: 14px;  /* Adjust font size for better readability */
+  }
+}
+
+@media (max-width: 420px) {
+  .contact-container {
+    width: 90%;  /* Make the container nearly full width on very small screens */
+    margin: 1rem auto; /* Further reduce margin for very small screens */
+  }
+
+  .chat-container {
+    width: 95%;  /* Make the container almost full width for small screens */
+    padding: 10px;  /* Further reduce padding for tight space */
+    margin-top: 2rem;  /* Reduce top margin for mobile screens */
+  }
+
+  h2 {
+    font-size: 1.3rem;  /* Adjust title font size for very small screens */
+  }
+
+  textarea {
+    font-size: 14px;  /* Ensure text area fits better on small screens */
+  }
+
+  button {
+    font-size: 14px;  /* Keep button size smaller for mobile */
+    padding: 8px;  /* Consistent button size for smaller screens */
+  }
+
+  .response {
+    padding: 8px;  /* Reduce padding for response box on very small screens */
+    font-size: 13px;  /* Smaller font size for mobile screens */
+  }
+}

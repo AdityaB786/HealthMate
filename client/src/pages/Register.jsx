@@ -26,24 +26,8 @@ function Register() {
     });
   };
 
-  const onUpload = async (element) => {
-    setLoading(true);
-    if (element.type === "image/jpeg" || element.type === "image/png") {
-      const data = new FormData();
-      data.append("file", element);
-      data.append("upload_preset", process.env.REACT_APP_CLOUDINARY_PRESET);
-      data.append("cloud_name", process.env.REACT_APP_CLOUDINARY_CLOUD_NAME);
-      fetch(process.env.REACT_APP_CLOUDINARY_BASE_URL, {
-        method: "POST",
-        body: data,
-      })
-        .then((res) => res.json())
-        .then((data) => setFile(data.url.toString()));
-      setLoading(false);
-    } else {
-      setLoading(false);
-      toast.error("Please select an image in jpeg or png format");
-    }
+  const onUpload = (element) => {
+    setFile(element); // Save the file if it's selected by the user
   };
 
   const formSubmit = async (e) => {
@@ -51,10 +35,11 @@ function Register() {
       e.preventDefault();
 
       if (loading) return;
-      if (file === "") return;
 
-      const { firstname, lastname, email, password, confpassword } =
-        formDetails;
+      const { firstname, lastname, email, password, confpassword } = formDetails;
+      const defaultImage = "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg";  // Default image URL
+
+      // Check if all required fields are filled
       if (!firstname || !lastname || !email || !password || !confpassword) {
         return toast.error("Input field should not be empty");
       } else if (firstname.length < 3) {
@@ -67,13 +52,16 @@ function Register() {
         return toast.error("Passwords do not match");
       }
 
+      // If no file was uploaded, use the default image
+      const profilePic = file ? URL.createObjectURL(file) : defaultImage;
+
       await toast.promise(
         axios.post("api/user/register", {
           firstname,
           lastname,
           email,
           password,
-          pic: file,
+          pic: profilePic, // Send the image (either user-uploaded or default)
         }),
         {
           pending: "Registering user...",
@@ -83,17 +71,16 @@ function Register() {
         }
       );
       return navigate("/login");
-    } catch (error) {}
+    } catch (error) {
+      toast.error("An error occurred while registering.");
+    }
   };
 
   return (
     <section className="register-section flex-center">
       <div className="register-container flex-center">
         <h2 className="form-heading">Sign Up</h2>
-        <form
-          onSubmit={formSubmit}
-          className="register-form"
-        >
+        <form onSubmit={formSubmit} className="register-form">
           <input
             type="text"
             name="firstname"
@@ -151,10 +138,7 @@ function Register() {
         </form>
         <p>
           Already a user?{" "}
-          <NavLink
-            className="login-link"
-            to={"/login"}
-          >
+          <NavLink className="login-link" to={"/login"}>
             Log in
           </NavLink>
         </p>

@@ -49,8 +49,8 @@ function Login() {
         }
       );
       localStorage.setItem("token", data.token);
-      dispatch(setUserInfo(jwtDecode(data.token).userId)); // Corrected usage of jwtDecode
-      getUser(jwtDecode(data.token).userId); // Corrected usage of jwtDecode
+      dispatch(setUserInfo(jwtDecode(data.token).userId)); 
+      getUser(jwtDecode(data.token).userId); 
     } catch (error) {
       return error;
     }

@@ -52,9 +52,9 @@ const schema = mongoose.Schema(
     },
     pic: {
       type: String,
-      default:
-        "https://icon-library.com/images/anonymous-avatar-icon/anonymous-avatar-icon-25.jpg",
-    },
+      default: "https://cdn.pixabay.com/photo/2024/04/30/22/05/ai-generated-8731062_1280.jpg",
+    }
+    ,
   },
   {
     timestamps: true,

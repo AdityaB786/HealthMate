@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
-import "../styles/chat.css";
+import "../styles/chat_contact.css";
 
 const Chat = () => {
   const [prompt, setPrompt] = useState("");
